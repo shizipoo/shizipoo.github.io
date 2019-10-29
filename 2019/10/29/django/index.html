@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.4.2',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="安装python3123456wget https:&#x2F;&#x2F;www.python.org&#x2F;ftp&#x2F;python&#x2F;3.6.9&#x2F;Python-3.6.9.tgztar -xzvf Python-3.6.9.tgzcd Python-3.6.9.&#x2F;configure --with-sslmakesudo make install   安装Django 方法一1sudo pip3 install Django">
+<meta name="keywords" content="django">
+<meta property="og:type" content="article">
+<meta property="og:title" content="django">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;29&#x2F;django&#x2F;index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="安装python3123456wget https:&#x2F;&#x2F;www.python.org&#x2F;ftp&#x2F;python&#x2F;3.6.9&#x2F;Python-3.6.9.tgztar -xzvf Python-3.6.9.tgzcd Python-3.6.9.&#x2F;configure --with-sslmakesudo make install   安装Django 方法一1sudo pip3 install Django">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http:&#x2F;&#x2F;pz8nrenoa.bkt.clouddn.com&#x2F;login.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;pz8nrenoa.bkt.clouddn.com&#x2F;blog.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;pz8nrenoa.bkt.clouddn.com&#x2F;blog_write.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;pz8nrenoa.bkt.clouddn.com&#x2F;my-blog.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;pz8nrenoa.bkt.clouddn.com&#x2F;wenzhang.png">
+<meta property="og:updated_time" content="2019-10-29T12:24:59.992Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;pz8nrenoa.bkt.clouddn.com&#x2F;login.png">
+
+<link rel="canonical" href="http://yoursite.com/2019/10/29/django/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>django | Hexo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/29/django/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          django
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2019-10-29 17:05:41 / Modified: 20:24:59" itemprop="dateCreated datePublished" datetime="2019-10-29T17:05:41+08:00">2019-10-29</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="安装python3"><a href="#安装python3" class="headerlink" title="安装python3"></a>安装python3</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz</span><br><span class="line">tar -xzvf Python-3.6.9.tgz</span><br><span class="line">cd Python-3.6.9</span><br><span class="line">./configure --with-ssl</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="安装Django"><a href="#安装Django" class="headerlink" title="安装Django"></a>安装Django</h3><ul>
+<li>方法一<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip3 install Django==2.1</span><br></pre></td></tr></table></figure></li>
+<li>方法二 (此方法安装的为最新版本)<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/django/django.git</span><br><span class="line">sudo pip3 install -e ./django</span><br></pre></td></tr></table></figure></li>
+<li>检测模块是否安装成功<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -c "import django;print(django.get_version())"</span><br></pre></td></tr></table></figure>
+如果安装django2.2以上版本，需要安装SQLite 3.8.3以上版本</li>
+</ul>
+<h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir myproject</span><br><span class="line">cd myproject</span><br><span class="line">django-admin startproject mysite .</span><br><span class="line">python3 manage.py runserver</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li><strong><font color=#FF0000 size=4 face="黑体" >报错</font></strong></li>
+</ul>
+<p>运行的<code>python3 manage.py runserver</code>出现了报错，<code>django.db.utils.NotSupportedError: URIs not supported</code>，是SQLite 的原因，SQLite 3.8以前的版本都有这个问题。</p>
+<p>查看SQLite的版本，命令如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sqlite3 --version</span></span><br><span class="line">3.6.20</span><br><span class="line"><span class="meta">$</span><span class="bash"> python3 -c <span class="string">"import sqlite3; print(sqlite3.version)"</span></span></span><br><span class="line">2.6.0</span><br><span class="line"><span class="meta">$</span><span class="bash"> python3 -c <span class="string">"import sqlite3; print(sqlite3.sqlite_version)"</span></span></span><br><span class="line">3.6.20</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong><font color=#FF0000 size=4 face="黑体" >解决办法：</font></strong><br>修改<code>/usr/local/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py</code><br>的155行的’uri’: True ，True 该给False。</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">155         kwargs.update(&#123;'check_same_thread': False, 'uri': True&#125;)</span><br><span class="line">156         return kwargs</span><br></pre></td></tr></table></figure>
+<p>然后重新运行<code>python3 manage.py runserver</code></p>
+<hr>
+<p>然后在浏览器中输入 <code>http://127.0.0.1:8000/</code> 即可看到django创建的网页</p>
+<p>但是如果在服务器上，需要修改settings.py脚本中的host地址，</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── db.sqlite3</span><br><span class="line">├── manage.py</span><br><span class="line">└── mysite</span><br><span class="line">    ├── __init__.py</span><br><span class="line">    ├── __pycache__</span><br><span class="line">    │   ├── __init__.cpython-36.pyc</span><br><span class="line">    │   ├── settings.cpython-36.pyc</span><br><span class="line">    │   ├── urls.cpython-36.pyc</span><br><span class="line">    │   └── wsgi.cpython-36.pyc</span><br><span class="line">    ├── settings.py</span><br><span class="line">    ├── urls.py</span><br><span class="line">    └── wsgi.py</span><br></pre></td></tr></table></figure>
+<p>将<code>ALLOWED_HOSTS = []</code> 改为 <code>ALLOWED_HOSTS = [&#39;172.26.0.23&#39;]</code> 然后运行<code>python3 manage.py runserver 0.0.0.0:8000</code><br>然后在浏览器中输入<code>http://172.26.0.23:8000/</code> 即可看到django创建的网页</p>
+<h3 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">python3 manage.py startapp blog</span><br><span class="line">.</span><br><span class="line">├── blog</span><br><span class="line">│   ├── admin.py</span><br><span class="line">│   ├── apps.py</span><br><span class="line">│   ├── __init__.py</span><br><span class="line">│   ├── migrations</span><br><span class="line">│   │   └── __init__.py</span><br><span class="line">│   ├── models.py</span><br><span class="line">│   ├── tests.py</span><br><span class="line">│   └── views.py</span><br><span class="line">├── db.sqlite3</span><br><span class="line">├── manage.py</span><br><span class="line">└── mysite</span><br><span class="line">    ├── __init__.py</span><br><span class="line">    ├── __pycache__</span><br><span class="line">    │   ├── __init__.cpython-36.pyc</span><br><span class="line">    │   ├── settings.cpython-36.pyc</span><br><span class="line">    │   ├── urls.cpython-36.pyc</span><br><span class="line">    │   └── wsgi.cpython-36.pyc</span><br><span class="line">    ├── settings.py</span><br><span class="line">    ├── urls.py</span><br><span class="line">    └── wsgi.py</span><br></pre></td></tr></table></figure>
+<p>创建完应用，需要进行如下配置：</p>
+<hr>
+<ul>
+<li><p>设置 <code>./mysite/setttings.py</code>文件，添加blog应用：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">INSTALLED_APPS = [</span><br><span class="line">    <span class="string">'django.contrib.admin'</span>,</span><br><span class="line">    <span class="string">'django.contrib.auth'</span>,</span><br><span class="line">    <span class="string">'django.contrib.contenttypes'</span>,</span><br><span class="line">    <span class="string">'django.contrib.sessions'</span>,</span><br><span class="line">    <span class="string">'django.contrib.messages'</span>,</span><br><span class="line">    <span class="string">'django.contrib.staticfiles'</span>,</span><br><span class="line">    <span class="string">'blog'</span>,</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置 ./blog/models.py文件，其实就是设置数据储存的字段：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</span><br><span class="line"><span class="keyword">from</span> django.utils <span class="keyword">import</span> timezone</span><br><span class="line"><span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> User</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create your models here.</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BlogArticles</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">    title = models.CharField(max_length=<span class="number">300</span>)</span><br><span class="line">    author = models.ForeignKey(User, related_name=<span class="string">"blog_posts"</span>, on_delete=models.CASCADE)</span><br><span class="line">    body = models.TextField()</span><br><span class="line">    publish = models.DateTimeField(default=timezone.now)</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></span><br><span class="line">        ordering = (<span class="string">"-publish"</span>,)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.title</span><br></pre></td></tr></table></figure></li>
+<li><p>运行 <code>python3 manage.py makemigrations</code> 创建模型</p>
+</li>
+<li><p>运行<code>python3 manage.py migrate</code> 创建数据库</p>
+</li>
+</ul>
+<hr>
+<h3 id="发布博客文章"><a href="#发布博客文章" class="headerlink" title="发布博客文章"></a>发布博客文章</h3><ol>
+<li><p>首先要创建超级用户，设置用户名，邮箱和密码。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 manage.py createsuperuser</span><br></pre></td></tr></table></figure>
+<p>然后运行<code>python3 manage.py runserver 0.0.0.0:8000</code>在浏览其中输入<code>http://172.26.0.23:8000/admin/</code> 就会出现下面的界面：<br><img src="http://pz8nrenoa.bkt.clouddn.com/login.png" alt="Django 登录" title="django登录"><br>输入刚刚设置的账户和密码即可登录，登录完成的界面如下所示：<br><img src="http://pz8nrenoa.bkt.clouddn.com/blog.png" alt="blog"></p>
+</li>
+<li><p>要想发表博客，需要做如下设置：<br>编写<code>./blog/admin.py</code>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> BlogArticles</span><br><span class="line"></span><br><span class="line"><span class="comment"># Register your models here.</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BlogArticlesAdmin</span><span class="params">(admin.ModelAdmin)</span>:</span></span><br><span class="line">    list_display = (<span class="string">"title"</span>, <span class="string">"author"</span>, <span class="string">"publish"</span>)</span><br><span class="line">    list_filter = (<span class="string">"publish"</span>, <span class="string">"author"</span>)</span><br><span class="line">    search_fields = (<span class="string">'title'</span>, <span class="string">"body"</span>)</span><br><span class="line">    raw_id_fields = (<span class="string">"author"</span>,)</span><br><span class="line">    date_hierarchy = <span class="string">"publish"</span></span><br><span class="line">    ordering = [<span class="string">'publish'</span>,<span class="string">'author'</span>]</span><br><span class="line"></span><br><span class="line">admin.site.register(BlogArticles,BlogArticlesAdmin)</span><br></pre></td></tr></table></figure>
+<p>刷新页面，就可以看到发布博客的位置：<br><img src="http://pz8nrenoa.bkt.clouddn.com/blog_write.png" alt="添加博客"></p>
+</li>
+</ol>
+<h3 id="显示博客信息"><a href="#显示博客信息" class="headerlink" title="显示博客信息"></a>显示博客信息</h3><ul>
+<li><p>显示文章标题</p>
+<ul>
+<li>配置./blog/views.py<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</span><br><span class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> BlogArticles</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create your views here.</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">blog_title</span><span class="params">(request)</span>:</span></span><br><span class="line">    blogs = BlogArticles.objects.all()</span><br><span class="line">    <span class="keyword">return</span> render(request, <span class="string">"blog/titles.html"</span>, &#123;<span class="string">"blogs"</span>:blogs&#125;)</span><br></pre></td></tr></table></figure></li>
+<li>在./blog/文件夹下创建templates文件夹，并创建如下文件：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">templates</span><br><span class="line">├── base.html</span><br><span class="line">└── blog</span><br><span class="line">    └── titles.html</span><br></pre></td></tr></table></figure></li>
+<li>修改base.html文件：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;! DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"zh-cn"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta http-equiv=<span class="string">"X-UA-Compatible"</span> content=<span class="string">"IE=Edge"</span>&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"utf-8"</span>&gt;</span><br><span class="line">    &lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width, initial-scale=1"</span>&gt;</span><br><span class="line">    &lt;title&gt;&#123;% block title %&#125;&#123;% endblock %&#125;&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">    &lt;link rel="stylesheet" href="http:/</span><span class="regexp">/necolas.github.io/</span>normalize.css/<span class="string">"&gt;</span></span><br><span class="line"><span class="string">    &lt;link rel="</span>stylesheet<span class="string">" href="</span>http:<span class="comment">//libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css"&gt;</span></span><br><span class="line">&lt;<span class="regexp">/head&gt;</span></span><br><span class="line"><span class="regexp">&lt;body&gt;</span></span><br><span class="line"><span class="regexp">&lt;div class="container"&gt;</span></span><br><span class="line"><span class="regexp">    &#123;% block content %&#125;</span></span><br><span class="line"><span class="regexp">    &#123;% endblock %&#125;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br><span class="line">&lt;script src=<span class="string">"http://libs.baidu.com/jquery/2.0.0/jquery.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;script src=<span class="string">"http://libs.baidu.com/boostrap/3.0.3/js/bootstrap.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>html&gt;</span><br></pre></td></tr></table></figure></li>
+<li>修改./templates/blog/titles.html文件：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#123;% extends <span class="string">"base.html"</span> %&#125;</span><br><span class="line">&#123;% block title %&#125;blog titles&#123;% endblock %&#125;</span><br><span class="line">&#123;% block content %&#125;</span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"row text-center vertical-middle-sm"</span>&gt;</span><br><span class="line">    &lt;h1&gt;我的博客&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"row"</span>&gt;</span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"col-xs-12 col-md-8"</span>&gt;</span><br><span class="line">        &lt;ul&gt;</span><br><span class="line">            &#123;% <span class="keyword">for</span> blog <span class="keyword">in</span> blogs %&#125;</span><br><span class="line">            &lt;li&gt;&#123;&#123; blog.title &#125;&#125;&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">            &#123;% endfor %&#125;</span></span><br><span class="line"><span class="regexp">        &lt;/u</span>l&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;div class="col-xs-6 col-md-4"&gt;</span></span><br><span class="line"><span class="regexp">        &lt;h2&gt;广告&lt;/</span>h2&gt;</span><br><span class="line">        &lt;p&gt;跟老齐学：www.itdiffer.com&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">        &lt;img width="200px" src="http:/</span><span class="regexp">/pydi4imsi.bkt.clouddn.com/</span><span class="number">1001.</span>jpg<span class="string">"&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">&#123;% endblock %&#125;</span></span><br></pre></td></tr></table></figure></li>
+<li>修改./mysite/urls.py文件：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url,include</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    url(<span class="string">r'^admin/'</span>, admin.site.urls),</span><br><span class="line">    url(<span class="string">r'^blog/'</span>, include(<span class="string">'blog.urls'</span>)),</span><br><span class="line">]</span><br></pre></td></tr></table></figure></li>
+<li>修改./blog/urls.py文件：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url</span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> views</span><br><span class="line"></span><br><span class="line">urlpatterns=[</span><br><span class="line">    url(<span class="string">r'^$'</span>, views.blog_title, name=<span class="string">"blog_title"</span>),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+然后在浏览器中输入<code>http://172.26.0.23:8000/blog/</code>即可看到如下界面：<img src="http://pz8nrenoa.bkt.clouddn.com/my-blog.png" alt="my blog" style="zoom:75%;" /></li>
+</ul>
+</li>
+<li><p>查看文章内容</p>
+<ul>
+<li><p>修改titles.html：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">for</span> blog <span class="keyword">in</span> blogs %&#125;</span><br><span class="line">    &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&#123;&#123; blog.id &#125;&#125;"</span>&gt;</span>&#123;&#123; blog.title &#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>在./blog/views.py中添加文章请求的函数blog_article():</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">blog_article</span><span class="params">(request, article_id)</span>:</span></span><br><span class="line">    article = BlogArticles.objects.get(id=article_id)</span><br><span class="line">    pub = article.publish</span><br><span class="line">    <span class="keyword">return</span> render(request, <span class="string">"blog/content.html"</span>, &#123;<span class="string">"article"</span>:article , <span class="string">"publish"</span>:pub &#125;)</span><br></pre></td></tr></table></figure></li>
+<li><p>创建模板./templates/blog/content.html文件：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;% extends <span class="string">"base.html"</span> %&#125;</span><br><span class="line">&#123;% block title %&#125;blog article&#123;% endblock %&#125;</span><br><span class="line">&#123;% block content %&#125;</span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"row text-center vertical-middke-sm"</span>&gt;</span><br><span class="line">    &lt;h1&gt;&#123;&#123; article.title &#125;&#125;&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"row"</span>&gt;</span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"col-xs-12 col-md-8"</span>&gt;</span><br><span class="line">        &lt;p <span class="class"><span class="keyword">class</span></span>=<span class="string">"text-center"</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123; article.author.username &#125;&#125;      <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"margin-left:20px"</span>&gt;</span>&#123;&#123; article.publish &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line">        &lt;div&gt;&#123;&#123; article.body &#125;&#125;&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;</span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"col-xs-6 col-md-4"</span>&gt;</span><br><span class="line">        &lt;h2&gt;广告&lt;<span class="regexp">/h2&gt;</span></span><br><span class="line"><span class="regexp">        &lt;p&gt;跟老齐学：www.itdiffer.com&lt;/</span>p&gt;</span><br><span class="line">        &lt;img width=<span class="string">"200px"</span> src=<span class="string">"http://pydi4imsi.bkt.clouddn.com/1001.jpg"</span>&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br><span class="line">&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>修改./blog/urls.py</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url</span><br><span class="line"><span class="keyword">from</span> . import views</span><br><span class="line"></span><br><span class="line">urlpatterns=[</span><br><span class="line">    url(r<span class="string">'^$'</span>, views.blog_title, name=<span class="string">"blog_title"</span>),</span><br><span class="line">    url(r<span class="string">'(?P&lt;article_id&gt;\d)/$'</span>, views.blog_article,     name=<span class="string">"blog_detail"</span>),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>然后刷新页面，点击文章标题，即可出现下面的界面：</p>
+<img src="http://pz8nrenoa.bkt.clouddn.com/wenzhang.png" alt="文章" style="zoom:75%;" />
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="django的MTV"><a href="#django的MTV" class="headerlink" title="django的MTV"></a>django的MTV</h3><ul>
+<li><strong>M</strong>: 模型（Model），即数据存取层，模型是网站项目的基础，主要负责处理与数据相关的事务，如读取、写入数据等。</li>
+<li><strong>T</strong>:模板（Template）,即表现层，处理与表现相关的事务，例如如何在页面中显示相关内容。</li>
+<li><strong>V</strong>:视图（Views），即业务逻辑层，包含存取模型及调取相应模板的相关逻辑， 是 M （模型）和 T （模板）之间的桥梁。当 Django 得到用户的请求后，根据 URL 映射关系调用相应的视图，视图则调用和处理有关数据。与模板相比，视图确定访问者能看到哪些数据，而模板确定怎么看到这些数据（或者说用什么方式看到这些数据）。</li>
+</ul>
+<p>参考链接：<a href="https://simpleisbetterthancomplex.com/series/beginners-guide/1.11/" target="_blank" rel="noopener">https://simpleisbetterthancomplex.com/series/beginners-guide/1.11/</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/django/" rel="tag"># django</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/2019/10/29/test-my-site/" rel="next" title="test_my_site">
+                  <i class="fa fa-chevron-left"></i> test_my_site
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+                <a href="/2019/10/29/hello-world/" rel="prev" title="Hello World">
+                  Hello World <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装python3"><span class="nav-number">1.</span> <span class="nav-text">安装python3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Django"><span class="nav-number">2.</span> <span class="nav-text">安装Django</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建项目"><span class="nav-number">3.</span> <span class="nav-text">创建项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建应用"><span class="nav-number">4.</span> <span class="nav-text">创建应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发布博客文章"><span class="nav-number">5.</span> <span class="nav-text">发布博客文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显示博客信息"><span class="nav-number">6.</span> <span class="nav-text">显示博客信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#django的MTV"><span class="nav-number">7.</span> <span class="nav-text">django的MTV</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="John Doe"
+    src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.0.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.2
+  </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
