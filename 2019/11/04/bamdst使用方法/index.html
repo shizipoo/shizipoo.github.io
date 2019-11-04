@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="baidu-site-verification" content="vvVgSQUzPU" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="keywords" content="虎虎|博客|个人|utone|Utone|">
+    <meta name="description" content="骑士恨煎蛋，骑士恨孜然">
+    
+    <title>
+       bamdst使用方法 -  shizipo
+    </title>
+    <link rel="stylesheet" href="/css/style.css"> 
+    
+      <link rel="icon" href="/images/favicon.ico" />
+    
+  </head>
+  <body>
+    <div id="container">
+      <div id="main-left">
+        <div id="introduce">
+          <div class="logo-worp">
+            <a href="/"><img class="logo" src="/images/logo.png" alt=""/></a>
+          </div>
+          <ul>
+            
+              <li><a href="/"> Home </a></li>
+            
+              <li><a href="/archives"> Archive </a></li>
+            
+              <li><a href="/about"> About </a></li>
+            
+              <li><a href="/atom.xml"> RSS </a></li>
+            
+            <li>
+              <img id="search-img" src="/images/search.svg" alt="search" />
+            </li>
+          </ul>
+           
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常规："><span class="post-toc-number">1.</span> <span class="post-toc-text">常规：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#管道模式："><span class="post-toc-number">2.</span> <span class="post-toc-text">管道模式：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#参数："><span class="post-toc-number">3.</span> <span class="post-toc-text">参数：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#可选参数："><span class="post-toc-number">4.</span> <span class="post-toc-text">可选参数：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#输出文件："><span class="post-toc-number">5.</span> <span class="post-toc-text">输出文件：</span></a></li></ol> 
+          
+        </div>
+      </div>
+      <div id="main-right"><div id="post">
+    
+    <header class="article-header">
+        <h1>
+            bamdst使用方法
+        </h1>
+    </header>
+    
+    <div class="post-meta">
+        <time class="post-data" datetime="2019-11-04T12:46:14.000Z" itemprop="datePublished">
+            2019-11-04
+        </time>
+        
+        
+        <ul class="post-tag-list" itemprop="keywords"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/NGS/" rel="tag">NGS</a><span class="post-tag-list-count">1</span></li></ul>
+        
+    </div>
+    
+    <div class="post-entry">
+        <p>Bamdst 是一个轻量级工具，用来统计bam文件的目标区域深度覆盖。Bam 文件需要进行排序，bed文件和输出路径必须进行指定。<br>Github地址：<a href="https://github.com/shiquan/bamdst" target="_blank" rel="noopener">https://github.com/shiquan/bamdst</a></p>
+<h3 id="常规："><a href="#常规：" class="headerlink" title="常规："></a>常规：</h3><pre><code>bamdst -p &lt;probe.bed&gt; -o ./ in1.bam</code></pre><h3 id="管道模式："><a href="#管道模式：" class="headerlink" title="管道模式："></a>管道模式：</h3><pre><code>samtools view in1.bam -u | bamdst -p x.bed -o ./ -</code></pre><h3 id="参数："><a href="#参数：" class="headerlink" title="参数："></a>参数：</h3><pre><code>-o / --outdir [dir] 
+设置输出路径 [强制]
+-p / --bed [file]
+探针或目标区域文件，这些区域需要合并 [强制]</code></pre><h3 id="可选参数："><a href="#可选参数：" class="headerlink" title="可选参数："></a>可选参数：</h3><pre><code>-f / --flank [num]
+如果你想计算侧翼区域的覆盖度，设置这个值，默认值200。
+--maxdepth [num]
+对于一些项目，特殊区域的深度非常高，如果你不想在分布文件中显示这些不正常的深度，设置阈值去过滤它们。默认值是0（不过滤）。
+--cutoffdepth [num]
+对于一些项目，人们关注特定深度的覆盖度，比如10000X。bamdst 仅仅计算0x, 4x, 10x, 30x, 100x的覆盖度 ，所以你可以设置这个值，在coverage.report 文件中会显示特定的覆盖度。默认值0。 
+--isize [num]
+对于比对率差的双端读长，推断的插入片段大小非常大。为了合理的可视化目的可以设置一个阈值。默认值2000。
+--uncover [num]
+为了计算覆盖度不好的区域，设置这个阈值。默认是&lt;5。
+--use_rmdup (v1.0.0以后的一个可用参数 )
+使用rmdup depth代替cover depth来计算目标区域的覆盖度。</code></pre><h3 id="输出文件："><a href="#输出文件：" class="headerlink" title="输出文件："></a>输出文件：</h3><p>输出文件夹中会有7个文件。它们是：</p>
+<pre><code>-coverage.report
+这个文件包含目标区域和侧翼区域的所有覆盖度信息，输入文件的reads信息。
+-cumu.plot
+深度分布图
+-insert.plot
+推断的插入片段大小分布图
+-chromosome.report
+每一条染色体的深度和覆盖度信息
+-region.tsv.gz
+对于bed文件中的每一个区域，平均深度，中位深度和这个区域的覆盖度将显示在这个文件中。
+-depth.tsv.gz
+对于探针文件（bed）的每一个位置，三种深度值将被计算，包括raw depth , rmdup depth 和coverage depth 。raw depth 从bam文件中检索，没有任何限制。rmdup depth 计算去除重复reads，二次比对reads和低map质量reads(mapQ&lt;20) ，这个值与samtools depth 的输出结果很相似。coverage depth 是考虑了缺失区域的raw depth ，所以它的值应该大于或等于raw depth 。我们用raw depth 来评估 coverage.report文件中的覆盖度信息。如果你想用rmdup depth 来计算覆盖度，请使用 &quot;--use_rmdup&quot;参数。
+-uncover.bed
+此bed文件中包含bam文件比对探针文件，不好的覆盖和没有覆盖的区域。通过“--uncover”来设置uncover的阈值。</code></pre>
+    </div>
+    <!--畅言PC和WAP自适应版-->
+  
+</div></div>
+    </div>
+    <div id="footer">人生苦短，我用python !</div>
+    <img id="top" src="/images/up-circle.svg" alt="top" />
+    
+      <div id="search-mask"></div>
+      <div id="search-pop">
+        <input type="text" id="search-input" placeholder="请输入关键词" />
+        <img id="search-close" src="/images/close-circle.svg" alt="close" />
+        <div id="search-body">
+          <ul id="search-ul"></ul>
+        </div>
+      </div>
+    
+  </body>
+</html>
+<!-- 加载主题脚本文件 -->
+<script src="/scripts/utone.js"></script>
+
+<script type="text/javascript">
+  window.onload = function() {
+    scroll.init()
+    siteSearch.init()
+  }
+</script>
